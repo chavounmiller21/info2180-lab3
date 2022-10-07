@@ -100,3 +100,16 @@ function winChecker () {
         console.log("Game Over Bro!!");
     }
 }
+function restartGame(){
+    currentPlays = ["","","","","","","","",""];
+    let boxes = document.getElementById("board").children;
+    for (let i = 0; i < boxes.length; i++){
+        boxes[i].innerHTML = "";
+        boxes[i].classList.remove("X");
+        boxes[i].classList.remove("O");
+    }
+    let statusBox = document.getElementById("status");
+    statusBox.classList.remove("you-won");
+    statusBox.innerHTML = "Move your mouse over a square and click to play an X or an O.";
+    gameOver = false;
+}
