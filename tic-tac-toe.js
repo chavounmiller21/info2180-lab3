@@ -68,3 +68,11 @@ let clickTracker = function(currentBox){
         console.log(currentPlays);
     }
 }
+
+let hoverTracker = function(currentBox){
+    currentBox.classList.add("hover");
+}
+
+let hoverTrackerRemoval = function(currentBox){
+    currentBox.classList.remove("hover");
+}
