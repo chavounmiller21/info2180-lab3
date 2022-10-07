@@ -76,3 +76,27 @@ let hoverTracker = function(currentBox){
 let hoverTrackerRemoval = function(currentBox){
     currentBox.classList.remove("hover");
 }
+
+function winChecker () {
+    for (let i = 0; i < 8; i++){
+        let winCheck = winningSquares[i];
+        let a = currentPlays[winCheck[0]];
+        let b = currentPlays[winCheck[1]];
+        let c = currentPlays[winCheck[2]];
+
+        if (a == "" || b == "" || c==""){
+            continue;
+        }
+        if (a == b && b ==c){
+            gameOver = true;
+            break;
+        }
+    }
+    if (gameOver){
+        let statusBox = document.getElementById("status");
+        let winnerMsg = `Congratulations! ${player} is the Winner!`;
+        statusBox.classList.add("you-won");
+        statusBox.innerHTML = winnerMsg;
+        console.log("Game Over Bro!!");
+    }
+}
