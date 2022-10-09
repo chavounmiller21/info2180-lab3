@@ -17,9 +17,7 @@ window.onload = function() {
 
     }
     let newGameButton = document.getElementsByClassName("btn");
-//    for (let i = 0; i < newGameButton.length; i++){
-//        console.log(newGameButton[i]);
-//    }
+
     console.log(newGameButton[0]);
     newGameButton[0].onclick = function(){
         restartGame();
